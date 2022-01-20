@@ -31,7 +31,7 @@ pip3 install -r requirements.txt
 
 
 ```python
-$ python main.py 
+$  python manage.py runserver 0.0.0.0:8000
 ```
 
 - Open the link http://0.0.0.0:8000 / in the browser
