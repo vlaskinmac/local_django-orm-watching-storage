@@ -1,10 +1,7 @@
 import os
 
 from dotenv import load_dotenv
-from environs import Env
 
-env = Env()
-env.read_env()
 
 load_dotenv()
 
@@ -18,6 +15,8 @@ DATABASES = {
         'PASSWORD': os.getenv("PASSWORD"),
     }
 }
+
+DEBUG = os.getenv("DEBUG")
 
 INSTALLED_APPS = ['datacenter']
 
