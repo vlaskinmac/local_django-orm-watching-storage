@@ -26,6 +26,16 @@ pip3 install -r requirements.txt
 
 ```
 
+## Environment variables
+
+Request access to the database from an employee.
+
+- `HOST` - address DB
+- `PORT` - port DB
+- `NAME` - name DB
+- `USER` - name DB
+- `PASSWORD` - password DB
+- `SECRET_KEY` - secret key of the your site
 
 ## Launch code
 

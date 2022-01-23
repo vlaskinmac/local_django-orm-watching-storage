@@ -51,3 +51,31 @@ TIME_ZONE = 'Europe/Moscow'
 USE_TZ = True
 
 
+# TODO .env файл выглядит так:
+
+# DATABASES = {'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'HOST': 'checkpoint.devman.org',
+#         'PORT': '5434',
+#         'NAME': 'checkpoint',
+#         'USER': 'guard',
+#         'PASSWORD': 'osim5',
+#     }
+# }
+#
+# NAME= 'checkpoint'
+# USER= 'guard'
+# PASSWORD='osim5'
+# HOST='checkpoint.devman.org'
+# PORT='5434'
+#
+# DEBUG=True
+#
+# ALLOWED_HOSTS = [
+# 'localhost:8000',
+# '0.0.0.0:8000',
+# ]
+#
+# SECRET_KEY=b'\x00\xe4\xf0\x92OhW_q\xcaE$\xd31\xe6\x92\nd[\xf1\x8e\xb2\xcd\xc2T\xd6\xb7\xd3ns\x17l'
+
+
