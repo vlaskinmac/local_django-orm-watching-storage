@@ -1,30 +1,35 @@
 import os
 
+import dj_database_url
+
+from environs import Env
 from dotenv import load_dotenv
 
 
 load_dotenv()
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'checkpoint.devman.org',
-        'PORT': '5434',
-        'NAME': os.getenv("NAME"),
-        'USER': os.getenv("USER"),
-        'PASSWORD': os.getenv("PASSWORD"),
-    }
-}
 
-DEBUG = os.getenv('DEBUG')
+env = Env()
+env.read_env()
+
+# DATABASES = os.getenv("DATABASES")
+
+DATABASES = env.dj_db_url("DATABASES")
+DATABASES['default'] = dj_database_url.config(
+    default=f'postgres://{os.getenv("USER")}:'
+            f'{os.getenv("PASSWORD")}@{os.getenv("HOST")}:{os.getenv("PORT")}/{os.getenv("NAME")}'
+)
+
+
+DEBUG = env.bool('DEBUG')
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = 'REPLACE_ME'
+SECRET_KEY = env("SECRET_KEY")
 
 ROOT_URLCONF = "project.urls"
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
