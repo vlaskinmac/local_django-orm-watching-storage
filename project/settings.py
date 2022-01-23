@@ -16,7 +16,7 @@ DATABASES = {
     }
 }
 
-DEBUG = os.getenv("DEBUG")
+DEBUG = os.getenv('DEBUG')
 
 INSTALLED_APPS = ['datacenter']
 
