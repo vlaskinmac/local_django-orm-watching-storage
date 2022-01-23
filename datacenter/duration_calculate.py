@@ -23,9 +23,4 @@ def format_duration(duration):
 
 
 def is_visit_long(visit, minutes=60):
-    if visit.leaved_at:
-        duration_secs = visit.leaved_at - visit.entered_at
-    else:
-        leaved_at = datetime.datetime.now()
-        duration_secs = leaved_at - visit.entered_at.replace(tzinfo=None)
-    return duration_secs.total_seconds() > minutes
+    return get_duration(visit) > minutes
