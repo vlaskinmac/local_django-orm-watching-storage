@@ -30,12 +30,12 @@ pip3 install -r requirements.txt
 
 Request access to the database from an employee.
 
-- `HOST` - address DB
-- `PORT` - port DB
-- `NAME` - name DB
-- `USER` - name DB
-- `PASSWORD` - password DB
+- `ALLOWED_HOSTS` - list of allowed hosts
 - `SECRET_KEY` - secret key of the your site
+- `DATABASES` - accepts the parameter: `DATABASE_URL`
+- `DATABASE_URL` - declared in the config file with parameters specified your db in format: 
+`DATABASE_URL=postgres://user:password@host:port/dbname`
+
 
 ## Launch code
 
